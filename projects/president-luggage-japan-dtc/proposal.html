@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposal — President Luggage Japan DTC Market Entry</title>
+<style>
+  :root {
+    --navy: #1a2744;
+    --gold: #c8a45c;
+    --slate: #4a5568;
+    --light: #f7f8fa;
+    --border: #e2e6ed;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Georgia', 'Times New Roman', serif; color: var(--navy); line-height: 1.7; background: var(--white); }
+  .page { max-width: 900px; margin: 0 auto; padding: 40px 48px; }
+
+  /* Cover */
+  .cover { text-align: center; padding: 80px 48px 60px; border-bottom: 3px solid var(--gold); margin-bottom: 40px; }
+  .cover .brand { font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .cover h1 { font-size: 36px; font-weight: 700; margin-bottom: 8px; line-height: 1.2; }
+  .cover h2 { font-size: 18px; font-weight: 400; color: var(--slate); margin-bottom: 32px; }
+  .cover .meta { font-size: 14px; color: var(--slate); line-height: 2; }
+  .cover .meta strong { color: var(--navy); }
+  .cover .divider { width: 60px; height: 2px; background: var(--gold); margin: 24px auto; }
+  .cover .confidential { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-top: 24px; }
+
+  /* Sections */
+  h3 { font-size: 22px; color: var(--navy); margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  h4 { font-size: 16px; color: var(--navy); margin: 24px 0 10px; }
+  p { font-size: 15px; color: var(--slate); margin-bottom: 14px; }
+  .lead { font-size: 16px; color: var(--navy); font-style: italic; margin-bottom: 20px; }
+
+  /* Phase boxes */
+  .phase-box { background: var(--light); border-left: 4px solid var(--gold); padding: 24px 28px; margin: 20px 0 28px; border-radius: 0 8px 8px 0; }
+  .phase-box h4 { margin-top: 0; color: var(--gold); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; }
+
+  /* Work breakdown table */
+  table { width: 100%; border-collapse: collapse; margin: 16px 0 28px; font-size: 14px; }
+  th { background: var(--navy); color: var(--white); text-align: left; padding: 12px 16px; font-weight: 600; font-size: 13px; letter-spacing: 0.5px; }
+  td { padding: 12px 16px; border-bottom: 1px solid var(--border); vertical-align: top; color: var(--slate); }
+  tr:nth-child(even) td { background: var(--light); }
+  td:first-child { font-weight: 600; color: var(--navy); white-space: nowrap; }
+  td:last-child { text-align: right; font-weight: 600; color: var(--navy); white-space: nowrap; }
+  .total-row td { border-top: 2px solid var(--navy); border-bottom: 2px solid var(--navy); font-weight: 700; font-size: 15px; color: var(--navy); background: var(--light); }
+  .phase-total td { border-top: 1px solid var(--gold); font-weight: 600; color: var(--gold); background: #fdf8ee; }
+
+  /* Timeline */
+  .timeline { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0 28px; }
+  .timeline-item { background: var(--light); padding: 16px 20px; border-radius: 8px; border-left: 3px solid var(--gold); }
+  .timeline-item .period { font-size: 12px; color: var(--gold); letter-spacing: 1px; text-transform: uppercase; font-weight: 700; }
+  .timeline-item .desc { font-size: 14px; color: var(--navy); margin-top: 4px; font-weight: 600; }
+  .timeline-item .detail { font-size: 13px; color: var(--slate); margin-top: 4px; }
+
+  /* Lists */
+  ul { margin: 8px 0 16px 24px; }
+  li { font-size: 14px; color: var(--slate); margin-bottom: 6px; }
+  li strong { color: var(--navy); }
+
+  /* Notes */
+  .note-box { background: #fdf8ee; border: 1px solid var(--gold); border-radius: 8px; padding: 20px 24px; margin: 20px 0; }
+  .note-box h4 { color: var(--gold); margin-top: 0; }
+
+  /* Footer */
+  .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--slate); }
+  .footer a { color: var(--gold); text-decoration: none; }
+
+  /* Print */
+  @media print {
+    .page { padding: 20px; }
+    .cover { padding: 40px 20px 30px; }
+    body { font-size: 12px; }
+  }
+
+  /* TOC */
+  .toc { background: var(--light); border-radius: 8px; padding: 24px 28px; margin: 28px 0; }
+  .toc h4 { margin-top: 0; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { font-size: 14px; margin-bottom: 6px; }
+  .toc a { color: var(--navy); text-decoration: none; }
+  .toc a:hover { color: var(--gold); }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- COVER -->
+<div class="cover">
+  <div class="brand">Logan So La Man — Shopify Plus Expert</div>
+  <h1>Japan DTC Market Entry</h1>
+  <h2>Shopify Plus Build, Localisation & Go-to-Market Proposal</h2>
+  <div class="divider"></div>
+  <div class="meta">
+    <strong>Prepared for:</strong> Fiona Pietruski, on behalf of President Luggage<br>
+    <strong>Prepared by:</strong> Logan So La Man, Hong Kong<br>
+    <strong>Date:</strong> August 2026<br>
+    <strong>Reference:</strong> PL-JP-DTC-2026-001
+  </div>
+  <div class="divider"></div>
+  <div class="confidential">Confidential</div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <h4>Contents</h4>
+  <ol>
+    <li><a href="#exec-summary">Executive Summary</a></li>
+    <li><a href="#understanding">Understanding the Brief</a></li>
+    <li><a href="#scope">Scope of Work</a></li>
+    <li><a href="#phase1-detail">Phase 1 — Detailed Breakdown</a></li>
+    <li><a href="#phase2-detail">Phase 2 — Detailed Breakdown</a></li>
+    <li><a href="#migration">Asian Site Migration to Shopify Plus</a></li>
+    <li><a href="#timeline">Project Timeline</a></li>
+    <li><a href="#pricing">Investment Summary</a></li>
+    <li><a href="#assumptions">Assumptions & Dependencies</a></li>
+    <li><a href="#about">About Logan So La Man</a></li>
+  </ol>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<h3 id="exec-summary">1. Executive Summary</h3>
+<p class="lead">A two-phase Shopify Plus engagement to launch President Luggage as a DTC brand in Japan — starting with a controlled Kubiko soft launch in Spring 2027, followed by the premium Ki Line full launch in Summer 2027.</p>
+<p>President Luggage is returning to its origin market. Sixty years after the brand began making attaché cases in Japan, this engagement builds the digital infrastructure to re-enter as a modern DTC brand — localised for Japanese consumers, backed by a Shopify Plus platform, and validated through a phased approach that manages investment risk.</p>
+<p>This proposal covers the full scope: Shopify Plus store build, Japan-specific localisation, payment and fulfilment integration, SEO and analytics, influencer coordination support, quantitative research support, and the Phase 2 Ki Line expansion. It also addresses the migration of President Luggage's existing Asian sites to the Shopify Plus platform.</p>
+
+<!-- UNDERSTANDING THE BRIEF -->
+<h3 id="understanding">2. Understanding the Brief</h3>
+<p>President Luggage is an established Hong Kong luggage brand with deep Japanese supply-chain roots — many of its component suppliers and craft partners are Japanese. The brand occupies the <strong>"premium quality without the mark-up"</strong> position, which aligns strongly with Japanese consumer values: exacting standards for quality, design, durability, and value.</p>
+
+<div class="phase-box">
+  <h4>Phase 1 — Market Test</h4>
+  <p><strong>Product:</strong> Kubiko (existing hard-shell carry-on, ~$200–250 USD)</p>
+  <p><strong>Goal:</strong> Validate the DTC channel in Japan. Test site performance, fulfilment from China (drop-ship), returns process, price sensitivity, customer acquisition, and brand reception. Minimal marketing spend — the focus is operational signal and data.</p>
+  <p><strong>Timeline:</strong> Channel setup Q3–Q4 2026 → Soft launch Spring 2027</p>
+</div>
+
+<div class="phase-box">
+  <h4>Phase 2 — Full Launch</h4>
+  <p><strong>Product:</strong> Ki Line (new premium product designed for Japan, positioned above Kubiko)</p>
+  <p><strong>Goal:</strong> Scale what Phase 1 validated. Marketing investment ramps based on real customer data. Brand awareness, influencer deepening, expanded catalogue.</p>
+  <p><strong>Timeline:</strong> Summer 2027</p>
+</div>
+
+<p>Both phases ship product with a <strong>Japan-specific specification</strong>: enhanced warranty, wheelstop, replaceable wheels, consistent colourways, deliberate logo treatment, TSID by Travel Sentry on every product, and Japanese-preferred payment and returns processes.</p>
+
+<!-- SCOPE OF WORK -->
+<h3 id="scope">3. Scope of Work</h3>
+<p>The engagement is structured into seven work streams covering both phases, plus the parallel Asian site migration.</p>
+
+<h4>Work Stream A — Shopify Plus Store Build & Configuration</h4>
+<ul>
+  <li>Shopify Plus account provisioning and multi-market architecture design</li>
+  <li>Japan market storefront creation with dedicated domain (e.g., presidentluggage.jp or /ja subpath)</li>
+  <li>Store settings configuration: currency (JPY), tax, shipping zones, checkout localisation</li>
+  <li>Shopify Markets or Markets Pro configuration for Japan-specific pricing, duties, and tax display</li>
+  <li>Multi-currency and multi-language storefront setup within Shopify Plus</li>
+  <li>Staff accounts, permissions, and workflow configuration</li>
+</ul>
+
+<h4>Work Stream B — Theme Design & Development</h4>
+<ul>
+  <li>Custom Shopify theme design aligned with Japanese aesthetic preferences (clean, minimal, detail-oriented)</li>
+  <li>Mobile-first responsive design (mobile commerce dominates in Japan)</li>
+  <li>Product page templates optimised for Japanese consumers: detailed specifications, multiple imagery angles, size guides with metric units, material callouts</li>
+  <li>Brand storytelling sections: heritage narrative (60-year Japan origin), craftsmanship, sustainability</li>
+  <li>Japan-specific UI patterns: trust badges, warranty information prominent, TSID security callout</li>
+  <li>Accessibility and performance optimisation (Core Web Vitals targets)</li>
+</ul>
+
+<h4>Work Stream C — Japan Localisation</h4>
+<ul>
+  <li>Full Japanese language translation of storefront content (not machine translation — native-quality Japanese copywriting)</li>
+  <li>Product descriptions localised for Japanese market: emphasis on quality details, materials, craftsmanship process</li>
+  <li>Customer service templates in Japanese (order confirmation, shipping, returns, warranty)</li>
+  <li>Legal pages: 特定商取引法 (Tokutei Shouhou Torihiki Hou) required disclosures, privacy policy, terms of service — all in compliant Japanese</li>
+  <li>SEO-optimised Japanese content (keyword research for Japanese luggage/travel market)</li>
+  <li>Currency display in JPY with appropriate pricing psychology (e.g., ¥29,800 not $250)</li>
+</ul>
+
+<h4>Work Stream D — Payment & Fulfilment Integration</h4>
+<ul>
+  <li><strong>Payment gateways</strong> configured for Japanese consumer preferences:
+    <ul>
+      <li>Credit card (Visa, Mastercard, JCB, Amex — JCB is critical for Japan)</li>
+      <li>Konbini payment (コンビニ払い) — convenience store payment via Shopify-compatible provider</li>
+      <li>PayPay integration (dominant mobile payment in Japan)</li>
+      <li>Rakuten Pay (significant market share)</li>
+      <li>Bank transfer (銀行振込) option</li>
+      <li>Cash on delivery (代金引換) evaluation</li>
+    </ul>
+  </li>
+  <li><strong>Fulfilment setup:</strong>
+    <ul>
+      <li>Drop-ship integration from China warehouse — shipping rate configuration, transit time display</li>
+      <li>Japan domestic returns process design and Shopify workflow configuration</li>
+      <li>Returns address in Japan (partner warehouse or logistics provider coordination)</li>
+      <li>Shipping label automation and tracking integration (Yamato Transport / Sagawa compatibility)</li>
+      <li>Customs documentation automation for cross-border shipments</li>
+    </ul>
+  </li>
+</ul>
+
+<h4>Work Stream E — Analytics, SEO & Marketing Infrastructure</h4>
+<ul>
+  <li>Google Analytics 4 setup with Japan-specific event tracking and conversion goals</li>
+  <li>Google Search Console configuration for Japanese domain/subdirectory</li>
+  <li>Japanese SEO: keyword research, meta tags, structured data (Product schema), hreflang tags</li>
+  <li>LINE Official Account integration (Japan's dominant messaging platform — 95M+ users)</li>
+  <li>Social pixel installation: Instagram, Facebook, LINE, TikTok (as relevant to influencer strategy)</li>
+  <li>Email marketing setup (Klaviyo or Shopify Email) with Japanese templates and automation flows</li>
+  <li>Review and UGC app integration (Japanese consumers rely heavily on reviews before purchase)</li>
+  <li>UTM and attribution framework for influencer tracking</li>
+</ul>
+
+<h4>Work Stream F — Quantitative Research & Launch Support</h4>
+<ul>
+  <li>Pre-launch quantitative research survey design and deployment (brand perception, price sensitivity, category awareness among Japanese consumers)</li>
+  <li>Survey platform setup and respondent targeting coordination</li>
+  <li>Data analysis and positioning recommendations based on research findings</li>
+  <li>Influencer identification support: research and shortlist of Japanese travel, lifestyle, design, and sports influencers</li>
+  <li>Pre-launch landing page with email capture for early interest</li>
+  <li>Shopify pre-launch configuration (password page, coming-soon, email collection)</li>
+</ul>
+
+<h4>Work Stream G — Phase 2: Ki Line Launch & Scaling</h4>
+<ul>
+  <li>Ki Line product page design and development (premium positioning, enhanced storytelling)</li>
+  <li>Expanded catalogue integration across Japan range</li>
+  <li>Marketing campaign buildout based on Phase 1 data: paid social, search, influencer activations</li>
+  <li>A/B testing framework for optimisation (landing pages, product pages, checkout)</li>
+  <li>Performance reporting dashboard and Phase 1 learnings integration</li>
+  <li>Customer segmentation and retention marketing activation</li>
+</ul>
+
+<!-- PHASE 1 DETAIL -->
+<h3 id="phase1-detail">4. Phase 1 — Detailed Deliverables & Timeline</h3>
+
+<table>
+  <tr>
+    <th style="width:40%">Deliverable</th>
+    <th>Details</th>
+    <th style="width:18%">Timing</th>
+  </tr>
+  <tr>
+    <td>Shopify Plus Store Build</td>
+    <td>Account setup, Japan market storefront, multi-market architecture, staff configuration</td>
+    <td>Q3 2026</td>
+  </tr>
+  <tr>
+    <td>Custom Theme Development</td>
+    <td>Japan-aesthetic theme, mobile-first, product templates, brand storytelling sections</td>
+    <td>Q3 2026</td>
+  </tr>
+  <tr>
+    <td>Japanese Localisation</td>
+    <td>Native copywriting, product descriptions, legal pages (特定商取引法), email templates</td>
+    <td>Q3–Q4 2026</td>
+  </tr>
+  <tr>
+    <td>Payment Integration</td>
+    <td>JCB, Konbini, PayPay, Rakuten Pay, bank transfer — all configured and tested</td>
+    <td>Q4 2026</td>
+  </tr>
+  <tr>
+    <td>Fulfilment & Returns</td>
+    <td>China drop-ship setup, Japan returns process, shipping rates, tracking integration</td>
+    <td>Q4 2026</td>
+  </tr>
+  <tr>
+    <td>Analytics & SEO</td>
+    <td>GA4, Japanese SEO, LINE integration, review app, attribution framework</td>
+    <td>Q4 2026</td>
+  </tr>
+  <tr>
+    <td>Quant Research</td>
+    <td>Survey design, deployment, analysis, positioning recommendations</td>
+    <td>Q3–Q4 2026</td>
+  </tr>
+  <tr>
+    <td>Pre-Launch Page</td>
+    <td>Email capture landing page, coming-soon configuration</td>
+    <td>Q4 2026</td>
+  </tr>
+  <tr>
+    <td>Influencer Support</td>
+    <td>Research shortlist, outreach coordination, UTM tracking setup</td>
+    <td>Q4 2026</td>
+  </tr>
+  <tr>
+    <td>Soft Launch (Kubiko)</td>
+    <td>Store live, operations monitoring, data collection framework active</td>
+    <td>Spring 2027</td>
+  </tr>
+</table>
+
+<!-- PHASE 2 DETAIL -->
+<h3 id="phase2-detail">5. Phase 2 — Detailed Deliverables & Timeline</h3>
+
+<table>
+  <tr>
+    <th style="width:40%">Deliverable</th>
+    <th>Details</th>
+    <th style="width:18%">Timing</th>
+  </tr>
+  <tr>
+    <td>Ki Line Product Build</td>
+    <td>Premium product pages, enhanced storytelling, Japan-range catalogue expansion</td>
+    <td>Q1–Q2 2027</td>
+  </tr>
+  <tr>
+    <td>Phase 1 Data Integration</td>
+    <td>Customer segmentation analysis, conversion optimisation, pricing adjustment</td>
+    <td>Q1 2027</td>
+  </tr>
+  <tr>
+    <td>Marketing Campaign Build</td>
+    <td>Paid social, search campaigns, influencer activations, LINE campaigns</td>
+    <td>Q2 2027</td>
+  </tr>
+  <tr>
+    <td>A/B Testing & CRO</td>
+    <td>Landing page, product page, and checkout experimentation framework</td>
+    <td>Q2 2027</td>
+  </tr>
+  <tr>
+    <td>Retention Marketing</td>
+    <td>Email flows, loyalty programme evaluation, repeat purchase activation</td>
+    <td>Q2–Q3 2027</td>
+  </tr>
+  <tr>
+    <td>Full Launch (Ki Line)</td>
+    <td>Store expanded, marketing live, performance dashboard active</td>
+    <td>Summer 2027</td>
+  </tr>
+</table>
+
+<!-- MIGRATION -->
+<h3 id="migration">6. Asian Site Migration to Shopify Plus</h3>
+<p>Parallel to the Japan launch, this engagement includes migrating President Luggage's existing Asian storefronts to the Shopify Plus platform — consolidating into a unified multi-market architecture.</p>
+
+<h4>Migration Scope</h4>
+<ul>
+  <li><strong>Platform audit:</strong> Assess each existing Asian site's current platform, data structure, and integration dependencies</li>
+  <li><strong>Data migration:</strong> Products, customers, order history, content — mapped and migrated to Shopify Plus</li>
+  <li><strong>URL redirect mapping:</strong> Preserve SEO equity with comprehensive 301 redirect strategy</li>
+  <li><strong>Design adaptation:</strong> Align existing market storefronts with the new brand system while respecting local market preferences</li>
+  <li><strong>Payment & logistics:</strong> Configure market-specific payment gateways and fulfilment for each Asian market</li>
+  <li><strong>Unified admin:</strong> Single Shopify Plus organisation with multi-market storefronts, unified inventory, shared customer data</li>
+  <li><strong>Go-live coordination:</strong> Staged migration with parallel-run period to minimise disruption</li>
+</ul>
+
+<div class="note-box">
+  <h4>Note on Migration Phasing</h4>
+  <p>Migration of existing Asian sites can run in parallel with or after the Japan Phase 1 build, depending on President Luggage's priority and resource allocation. A separate migration timeline will be agreed once the Japan store architecture is established. Pricing below covers the migration as a fixed-fee engagement per market.</p>
+</div>
+
+<!-- TIMELINE -->
+<h3 id="timeline">7. Project Timeline</h3>
+
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="period">Aug–Sep 2026</div>
+    <div class="desc">Discovery & Architecture</div>
+    <div class="detail">Store architecture, theme design kickoff, quant research survey design, influencer research begins</div>
+  </div>
+  <div class="timeline-item">
+    <div class="period">Sep–Oct 2026</div>
+    <div class="desc">Store Build & Localisation</div>
+    <div class="detail">Theme development, Japanese copywriting, product page build, legal pages</div>
+  </div>
+  <div class="timeline-item">
+    <div class="period">Oct–Nov 2026</div>
+    <div class="desc">Integration & Testing</div>
+    <div class="detail">Payment gateways, fulfilment setup, returns process, analytics, full QA testing</div>
+  </div>
+  <div class="timeline-item">
+    <div class="period">Nov–Dec 2026</div>
+    <div class="desc">Pre-Launch</div>
+    <div class="detail">Soft launch readiness, pre-launch page live, influencer outreach, quant research analysis delivered</div>
+  </div>
+  <div class="timeline-item">
+    <div class="period">Spring 2027</div>
+    <div class="desc">Phase 1 Soft Launch</div>
+    <div class="detail">Kubiko live, operations monitoring, data collection, customer feedback loops</div>
+  </div>
+  <div class="timeline-item">
+    <div class="period">Q1–Q2 2027</div>
+    <div class="desc">Phase 2 Preparation</div>
+    <div class="detail">Ki Line build, Phase 1 data analysis, marketing campaign design, CRO setup</div>
+  </div>
+  <div class="timeline-item">
+    <div class="period">Summer 2027</div>
+    <div class="desc">Phase 2 Full Launch</div>
+    <div class="detail">Ki Line live, marketing campaigns active, performance dashboards, retention flows</div>
+  </div>
+  <div class="timeline-item">
+    <div class="period">Parallel / Ongoing</div>
+    <div class="desc">Asian Site Migration</div>
+    <div class="detail">Existing site audits, data migration, staged go-lives — phased alongside Japan work</div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<h3 id="pricing">8. Investment Summary</h3>
+<p>All fees quoted in Hong Kong Dollars (HKD). Detailed line items in the accompanying invoice.</p>
+
+<h4>Phase 1 — Market Test (Channel Setup & Soft Launch)</h4>
+<table>
+  <tr><th>Work Stream</th><th>Scope</th><th>Fee (HKD)</th></tr>
+  <tr><td>A. Store Build</td><td>Shopify Plus setup, Japan market architecture, configuration</td><td>$78,000</td></tr>
+  <tr><td>B. Theme Design</td><td>Custom Japan-aesthetic theme, mobile-first, product templates</td><td>$145,000</td></tr>
+  <tr><td>C. Localisation</td><td>Japanese copywriting, legal pages, email templates, SEO content</td><td>$120,000</td></tr>
+  <tr><td>D. Payment & Fulfilment</td><td>Payment gateway setup (JCB, Konbini, PayPay, etc.), drop-ship & returns</td><td>$95,000</td></tr>
+  <tr><td>E. Analytics & SEO</td><td>GA4, Japanese SEO, LINE, review app, attribution</td><td>$68,000</td></tr>
+  <tr><td>F. Research & Pre-Launch</td><td>Quant survey design/analysis, influencer research, pre-launch page</td><td>$85,000</td></tr>
+  <tr class="phase-total"><td colspan="2"><strong>Phase 1 Total</strong></td><td>$591,000</td></tr>
+</table>
+
+<h4>Phase 2 — Full Launch (Ki Line)</h4>
+<table>
+  <tr><th>Work Stream</th><th>Scope</th><th>Fee (HKD)</th></tr>
+  <tr><td>G. Ki Line Build</td><td>Premium product pages, catalogue expansion, brand storytelling</td><td>$95,000</td></tr>
+  <tr><td>CRO & Optimisation</td><td>A/B testing, conversion optimisation, performance tuning</td><td>$55,000</td></tr>
+  <tr><td>Marketing Campaigns</td><td>Paid social, search, LINE, influencer activation buildout</td><td>$88,000</td></tr>
+  <tr><td>Retention & CRM</td><td>Email flows, segmentation, loyalty evaluation, repeat purchase</td><td>$48,000</td></tr>
+  <tr class="phase-total"><td colspan="2"><strong>Phase 2 Total</strong></td><td>$286,000</td></tr>
+</table>
+
+<h4>Asian Site Migration to Shopify Plus</h4>
+<table>
+  <tr><th>Item</th><th>Scope</th><th>Fee (HKD)</th></tr>
+  <tr><td>Platform Audit & Strategy</td><td>Audit each existing site, migration planning, redirect mapping</td><td>$35,000</td></tr>
+  <tr><td>Data Migration</td><td>Products, customers, orders, content — per market (up to 3 markets)</td><td>$120,000</td></tr>
+  <tr><td>Design Adaptation</td><td>Align storefronts with new brand system, local market adjustments</td><td>$85,000</td></tr>
+  <tr><td>Integration & Go-Live</td><td>Payment, logistics, testing, staged migration per market</td><td>$75,000</td></tr>
+  <tr class="phase-total"><td colspan="2"><strong>Migration Total</strong></td><td>$315,000</td></tr>
+</table>
+
+<table style="margin-top: 24px;">
+  <tr class="total-row">
+    <td colspan="2"><strong>Total Engagement</strong></td>
+    <td><strong>HKD $1,192,000</strong></td>
+  </tr>
+</table>
+
+<div class="note-box">
+  <h4>Optional Ongoing Retainer (Post-Launch)</h4>
+  <p>After Phase 2 launch, an optional monthly retainer is available for ongoing store management, marketing optimisation, performance reporting, and iteration. Proposed at <strong>HKD $38,000/month</strong> on a 6-month commitment, covering up to 40 hours/month of Shopify Plus management, CRO, content updates, and reporting.</p>
+</div>
+
+<!-- ASSUMPTIONS -->
+<h3 id="assumptions">9. Assumptions & Dependencies</h3>
+<ul>
+  <li><strong>Shopify Plus license:</strong> Client provides or procures Shopify Plus subscription (currently USD $2,300/month). Not included in fees above.</li>
+  <li><strong>Third-party app subscriptions:</strong> Any paid Shopify apps (reviews, email marketing, etc.) are billed directly to the client. Recommendations provided during build.</li>
+  <li><strong>Product photography & video:</strong> Client provides product imagery. If additional photography or video production is needed for Japan market, quoted separately.</li>
+  <li><strong>Japanese copywriting:</strong> Fees include native Japanese copywriting. Client review and approval cycles assumed at 2 rounds per deliverable.</li>
+  <li><strong>Domain:</strong> Japan-specific domain procurement (.jp or similar) is client responsibility; DNS configuration included in scope.</li>
+  <li><strong>Payment gateway accounts:</strong> Client establishes merchant accounts with payment providers. Integration and configuration included in scope.</li>
+  <li><strong>Fulfilment partner:</strong> Client identifies Japan logistics/returns partner. Shopify configuration and integration included in scope.</li>
+  <li><strong>Influencer partnerships:</strong> Influencer fees (product gifting, paid partnerships) are client budget. Research, shortlisting, and coordination included in scope.</li>
+  <li><strong>Quantitative research:</strong> Survey platform and respondent panel costs are passed through at cost. Design, deployment, and analysis included in scope.</li>
+  <li><strong>Migration scope:</strong> Asian site migration pricing covers up to 3 existing markets. Additional markets quoted at HKD $40,000 per market.</li>
+  <li><strong>Travel:</strong> Any required travel to Japan for on-site work quoted separately.</li>
+</ul>
+
+<!-- ABOUT -->
+<h3 id="about">10. About Logan So La Man</h3>
+<p>Logan So La Man is a Shopify Plus expert based in Hong Kong with deep experience in cross-border e-commerce, Asia-Pacific market entry, and DTC brand building. With a portfolio spanning multiple markets and verticals, Logan specialises in taking established brands into new territories with localised, conversion-optimised Shopify Plus storefronts.</p>
+<p>Portfolio: <a href="https://logansolaman.com" style="color: var(--gold);">logansolaman.com</a></p>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>This proposal is valid for 30 days from date of issue.</p>
+  <p>Prepared by <a href="https://logansolaman.com">Logan So La Man</a> · Hong Kong · August 2026</p>
+  <p>Reference: PL-JP-DTC-2026-001</p>
+</div>
+
+</div>
+</body>
+</html>
