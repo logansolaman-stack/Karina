@@ -4,10 +4,8 @@ on:
   push:
     branches: ["master"]
     paths:
-      - "proposal.html"
-      - "invoice.html"
       - "index.html"
-      - "projects/president-luggage-japan-dtc/**"
+      - "projects/**"
       - ".github/workflows/deploy-japan-dtc.yml"
   workflow_dispatch:
 

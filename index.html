@@ -3,103 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>President Luggage — Japan DTC Market Entry</title>
+<title>Karina — Project Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --pl-black: #000000;
-    --pl-white: #ffffff;
-    --pl-grey-700: #3a3a3a;
-    --pl-grey-500: #6b6b6b;
-    --pl-grey-300: #d4d4d4;
-    --pl-grey-100: #f5f5f5;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Nunito Sans', system-ui, -apple-system, sans-serif;
-    background: var(--pl-white);
-    color: var(--pl-black);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-  }
-  .card { text-align: center; max-width: 640px; width: 100%; }
-  .brand {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--pl-grey-500);
-    margin-bottom: 24px;
-    font-weight: 700;
-  }
-  h1 {
-    font-size: 42px;
-    font-weight: 900;
-    letter-spacing: -1px;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-  }
-  .subtitle {
-    font-size: 15px;
-    color: var(--pl-grey-700);
-    margin-bottom: 48px;
-    font-weight: 400;
-  }
-  .links { display: flex; flex-direction: column; gap: 16px; }
-  .links a {
-    display: block;
-    padding: 24px 32px;
-    background: var(--pl-grey-100);
-    border: 1px solid var(--pl-grey-300);
-    border-top: 3px solid var(--pl-black);
-    color: var(--pl-black);
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 800;
-    transition: all 0.2s ease;
-    letter-spacing: -0.3px;
-  }
-  .links a:hover {
-    background: var(--pl-black);
-    color: var(--pl-white);
-    transform: translateY(-2px);
-  }
-  .links a span {
-    display: block;
-    font-size: 13px;
-    color: var(--pl-grey-500);
-    font-weight: 400;
-    margin-top: 6px;
-  }
-  .links a:hover span { color: var(--pl-grey-300); }
-  .footer {
-    margin-top: 56px;
-    font-size: 11px;
-    color: var(--pl-grey-500);
-    letter-spacing: 0.5px;
-  }
-  .footer a { color: var(--pl-black); text-decoration: none; font-weight: 700; }
-  .divider { width: 48px; height: 3px; background: var(--pl-black); margin: 24px auto; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  background: #fafafa;
+  color: #1a1a1a;
+}
+h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+.tagline { color: #666; font-size: 16px; margin-bottom: 40px; }
+.project {
+  display: block;
+  background: #fff;
+  padding: 28px;
+  margin: 20px 0;
+  text-decoration: none;
+  color: #1a1a1a;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.project:hover { border-color: #999; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.project h2 { margin: 0 0 8px 0; font-size: 22px; }
+.project p { margin: 0; color: #555; font-size: 15px; line-height: 1.5; }
+.project .tag {
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 12px;
+  color: #444;
+}
+footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 13px; color: #888; }
 </style>
 </head>
 <body>
-<div class="card">
-  <div class="brand">Logan Solaman · Shopify Expert · Hong Kong</div>
-  <h1>Japan DTC<br>Market Entry</h1>
-  <p class="subtitle">President Luggage — Proposal &amp; Invoice</p>
-  <div class="divider"></div>
-  <div class="links">
-    <a href="proposal.html">📋 View Proposal<span>Detailed scope, deliverables, timeline &amp; pricing</span></a>
-    <a href="invoice.html">🧾 View Invoice<span>HKD pricing, payment terms &amp; bank details</span></a>
-  </div>
-  <div class="footer">
-    Prepared for Fiona Pietruski / President Luggage · August 2026<br>
+  <h1>Karina</h1>
+  <div class="tagline">Project documents and proposals</div>
+
+  <a href="projects/president-luggage-japan-dtc/" class="project">
+    <h2>🧳 President Luggage — Japan DTC</h2>
+    <p>Shopify Plus Japan market entry strategy, proposal, and invoice for President Luggage's DTC expansion and Asian site migration.</p>
+    <span class="tag">Shopify Plus</span>
+    <span class="tag">Japan Market Entry</span>
+  </a>
+
+  <a href="projects/funguy-chocolate-strategy/" class="project">
+    <h2>🍫 The Fun Guy Chocolate — Growth Strategy</h2>
+    <p>Corporate growth strategy and path-to-$1M roadmap for functional mushroom chocolate brand. Three-phase plan covering DTC, retail, and B2B expansion.</p>
+    <span class="tag">Corporate Strategy</span>
+    <span class="tag">DTC Growth</span>
+  </a>
+
+  <footer>
+    <strong>Logan Solaman</strong> · Shopify Expert · Hong Kong<br>
     <a href="https://logansolaman.com">logansolaman.com</a>
-  </div>
-</div>
+  </footer>
 </body>
 </html>
