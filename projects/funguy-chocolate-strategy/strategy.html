@@ -38,6 +38,14 @@ body {
   color: #6b6b6b;
 }
 
+/* Fix: Allow sections to grow beyond A4 page limit */
+.sheet {
+  height: auto !important;
+  min-height: 297mm;
+  overflow: visible !important;
+  page-break-after: always;
+}
+
 /* Cover Page */
 .cover {
   display: flex;
