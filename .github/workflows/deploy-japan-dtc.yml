@@ -4,6 +4,9 @@ on:
   push:
     branches: ["master"]
     paths:
+      - "proposal.html"
+      - "invoice.html"
+      - "index.html"
       - "projects/president-luggage-japan-dtc/**"
       - ".github/workflows/deploy-japan-dtc.yml"
   workflow_dispatch:
@@ -31,7 +34,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "projects/president-luggage-japan-dtc"
+          path: "."
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
