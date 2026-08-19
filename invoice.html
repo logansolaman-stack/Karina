@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice — President Luggage Japan DTC Market Entry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
+<style>
+  :root {
+    --pl-black: #000000;
+    --pl-white: #ffffff;
+    --pl-grey-900: #1a1a1a;
+    --pl-grey-700: #3a3a3a;
+    --pl-grey-500: #6b6b6b;
+    --pl-grey-300: #d4d4d4;
+    --pl-grey-100: #f5f5f5;
+    --pl-accent: #FFAC1C;
+  }
+  @page { size: A4 }
+  body {
+    font-family: 'Nunito Sans', system-ui, -apple-system, sans-serif;
+    color: var(--pl-black);
+    line-height: 1.55;
+    font-weight: 400;
+  }
+  .sheet { font-size: 13px; }
+
+  /* Page numbers */
+  .page-num {
+    position: absolute;
+    bottom: 12mm;
+    right: 15mm;
+    font-size: 9px;
+    color: var(--pl-grey-500);
+    letter-spacing: 1px;
+  }
+  .page-footer {
+    position: absolute;
+    bottom: 12mm;
+    left: 15mm;
+    font-size: 9px;
+    color: var(--pl-grey-500);
+    letter-spacing: 0.5px;
+  }
+
+  /* Header */
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--pl-black);
+  }
+  .header-left .brand {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--pl-grey-500);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .header-left h1 {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .header-left .contact {
+    font-size: 13px;
+    color: var(--pl-grey-700);
+    line-height: 1.8;
+  }
+  .header-right { text-align: right; }
+  .header-right .invoice-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--pl-black);
+    font-weight: 800;
+    margin-bottom: 14px;
+  }
+  .header-right .invoice-meta {
+    font-size: 12px;
+    color: var(--pl-grey-700);
+    line-height: 2;
+  }
+  .header-right .invoice-meta strong { color: var(--pl-black); font-weight: 700; }
+
+  /* Addresses */
+  .addresses {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  .address-block {
+    background: var(--pl-grey-100);
+    padding: 18px;
+    border-left: 3px solid var(--pl-black);
+  }
+  .address-block h3 {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--pl-grey-500);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .address-block p {
+    font-size: 12px;
+    color: var(--pl-grey-700);
+    line-height: 1.7;
+    margin: 0;
+  }
+  .address-block strong {
+    color: var(--pl-black);
+    display: block;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+
+  /* Project Reference */
+  .project-ref {
+    background: var(--pl-black);
+    color: var(--pl-white);
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .project-ref .label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--pl-grey-300);
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .project-ref .value { font-size: 13px; font-weight: 700; }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+  th {
+    background: var(--pl-black);
+    color: var(--pl-white);
+    text-align: left;
+    padding: 10px 12px;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  th:last-child { text-align: right; }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--pl-grey-300);
+    vertical-align: top;
+    color: var(--pl-grey-700);
+  }
+  td:last-child {
+    text-align: right;
+    font-weight: 700;
+    color: var(--pl-black);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  tr:nth-child(even) td { background: var(--pl-grey-100); }
+  td:first-child { font-weight: 700; color: var(--pl-black); }
+  .item-desc {
+    font-size: 11px;
+    color: var(--pl-grey-500);
+    font-weight: 400;
+    margin-top: 3px;
+    display: block;
+  }
+  .phase-header td {
+    background: var(--pl-grey-100);
+    border-left: 3px solid var(--pl-black);
+    font-weight: 800;
+    color: var(--pl-black);
+    font-size: 12px;
+    padding: 10px 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .phase-subtotal td {
+    background: var(--pl-white);
+    border-top: 1px solid var(--pl-black);
+    font-weight: 700;
+    color: var(--pl-black);
+  }
+  .phase-subtotal td:first-child { padding-left: 24px; }
+  .total-row td {
+    background: var(--pl-black);
+    color: var(--pl-white);
+    font-weight: 800;
+    font-size: 14px;
+    padding: 14px 12px;
+    border: none;
+  }
+  .total-row td:first-child { border-radius: 3px 0 0 3px; }
+  .total-row td:last-child { border-radius: 0 3px 3px 0; text-align: right; }
+
+  /* Summary */
+  .summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+  }
+  .summary-left h3 {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--pl-black);
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--pl-grey-300);
+    font-weight: 800;
+  }
+  .summary-left ul { list-style: none; margin: 0; padding: 0; }
+  .summary-left li {
+    font-size: 11px;
+    color: var(--pl-grey-700);
+    margin-bottom: 6px;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .summary-left li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--pl-black);
+    font-weight: 800;
+  }
+  .summary-right {
+    background: var(--pl-grey-100);
+    padding: 20px;
+    border: 1px solid var(--pl-grey-300);
+  }
+  .summary-right .line {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 12px;
+    color: var(--pl-grey-700);
+  }
+  .summary-right .line.subtotal {
+    border-top: 1px solid var(--pl-grey-300);
+    padding-top: 10px;
+    margin-top: 8px;
+    font-weight: 700;
+    color: var(--pl-black);
+  }
+  .summary-right .line.tax { color: var(--pl-grey-500); font-size: 11px; }
+  .summary-right .line.total {
+    background: var(--pl-black);
+    color: var(--pl-white);
+    margin: 10px -20px -20px;
+    padding: 14px 20px;
+    border-radius: 0 0 3px 3px;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  /* Payment Terms */
+  .payment-section { margin: 30px 0; }
+  .payment-section h3 {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--pl-black);
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--pl-grey-300);
+    font-weight: 800;
+  }
+  .payment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .payment-box {
+    background: var(--pl-grey-100);
+    padding: 18px;
+    border: 1px solid var(--pl-grey-300);
+  }
+  .payment-box h4 {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--pl-grey-500);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .payment-box p {
+    font-size: 12px;
+    color: var(--pl-grey-700);
+    line-height: 1.8;
+    margin: 0;
+  }
+  .payment-box strong { color: var(--pl-black); font-weight: 700; }
+
+  /* Notes */
+  .notes {
+    background: var(--pl-grey-100);
+    border-left: 3px solid var(--pl-black);
+    padding: 18px 20px;
+    margin: 28px 0;
+  }
+  .notes h4 {
+    color: var(--pl-black);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+  .notes p { font-size: 11px; color: var(--pl-grey-700); line-height: 1.8; margin: 0; }
+
+  /* Footer */
+  .footer {
+    margin-top: 40px;
+    padding: 18px 0;
+    border-top: 2px solid var(--pl-black);
+    text-align: center;
+    font-size: 10px;
+    color: var(--pl-grey-500);
+    letter-spacing: 0.5px;
+  }
+  .footer .thanks {
+    font-size: 13px;
+    color: var(--pl-black);
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .footer a { color: var(--pl-black); text-decoration: none; font-weight: 700; }
+</style>
+</head>
+<body class="A4">
+
+<!-- ============ PAGE 1: HEADER + ADDRESSES + PROJECT REF ============ -->
+<section class="sheet padding-15mm">
+  <div class="header">
+    <div class="header-left">
+      <div class="brand">Logan Solaman</div>
+      <h1>Invoice</h1>
+      <div class="contact">
+        Shopify Expert<br>
+        Hong Kong<br>
+        <a href="https://logansolaman.com" style="color: var(--pl-black); text-decoration: none; font-weight: 700;">logansolaman.com</a>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="invoice-label">Invoice PL-JP-2026-001</div>
+      <div class="invoice-meta">
+        <strong>Invoice #:</strong> PL-JP-2026-001<br>
+        <strong>Date:</strong> August 19, 2026<br>
+        <strong>Due Date:</strong> September 18, 2026<br>
+        <strong>Currency:</strong> HKD (Hong Kong Dollar)
+      </div>
+    </div>
+  </div>
+
+  <div class="addresses">
+    <div class="address-block">
+      <h3>Bill To</h3>
+      <p>
+        <strong>Fiona Pietruski</strong>
+        On behalf of President Luggage<br>
+        Hong Kong
+      </p>
+    </div>
+    <div class="address-block">
+      <h3>Project</h3>
+      <p>
+        <strong>Japan DTC Market Entry</strong>
+        Shopify Plus Build, Localisation &amp; Go-to-Market<br>
+        Two-Phase Engagement
+      </p>
+    </div>
+  </div>
+
+  <div class="project-ref">
+    <div>
+      <div class="label">Project Reference</div>
+      <div class="value">President Luggage Japan DTC — Phase 1 &amp; Phase 2 + Asian Site Migration</div>
+    </div>
+    <div>
+      <div class="label">Engagement Period</div>
+      <div class="value">August 2026 – Summer 2027</div>
+    </div>
+  </div>
+
+  <div class="page-footer">PL-JP-2026-001 · President Luggage</div>
+  <div class="page-num">01</div>
+</section>
+
+<!-- ============ PAGE 2: PHASE 1 INVOICE TABLE ============ -->
+<section class="sheet padding-15mm">
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 50%">Description</th>
+        <th style="width: 30%">Scope / Deliverables</th>
+        <th style="width: 20%">Amount (HKD)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="phase-header">
+        <td colspan="3">Phase 1 — Market Test (Channel Setup &amp; Soft Launch)</td>
+      </tr>
+      <tr>
+        <td>
+          A. Shopify Plus Store Build &amp; Configuration
+          <span class="item-desc">Account provisioning, Japan market storefront, multi-market architecture, Shopify Markets/Pro setup, staff accounts</span>
+        </td>
+        <td>Q3 2026</td>
+        <td>$7,800</td>
+      </tr>
+      <tr>
+        <td>
+          B. Custom Theme Design &amp; Development
+          <span class="item-desc">President Luggage brand-aligned theme, mobile-first responsive design, product page templates, brand storytelling sections</span>
+        </td>
+        <td>Q3 2026</td>
+        <td>$14,500</td>
+      </tr>
+      <tr>
+        <td>
+          C. Japan Localisation
+          <span class="item-desc">Native Japanese copywriting, product descriptions, customer service templates, legal pages (特定商取引法), SEO-optimised Japanese content</span>
+        </td>
+        <td>Q3–Q4 2026</td>
+        <td>$12,000</td>
+      </tr>
+      <tr>
+        <td>
+          D. Payment &amp; Fulfilment Integration
+          <span class="item-desc">Payment gateways (JCB, Konbini, PayPay, Rakuten Pay, bank transfer), China drop-ship setup, Japan returns process, shipping automation</span>
+        </td>
+        <td>Q4 2026</td>
+        <td>$9,500</td>
+      </tr>
+      <tr>
+        <td>
+          E. Analytics, SEO &amp; Marketing Infrastructure
+          <span class="item-desc">GA4 setup with Japan tracking, Japanese SEO, LINE Official Account integration, social pixels, email marketing, review/UGC app</span>
+        </td>
+        <td>Q4 2026</td>
+        <td>$6,800</td>
+      </tr>
+      <tr>
+        <td>
+          F. Quantitative Research &amp; Launch Support
+          <span class="item-desc">Pre-launch survey design &amp; deployment, data analysis, influencer research &amp; shortlist, pre-launch landing page</span>
+        </td>
+        <td>Q3–Q4 2026</td>
+        <td>$8,500</td>
+      </tr>
+      <tr class="phase-subtotal">
+        <td colspan="2"><strong>Phase 1 Subtotal</strong></td>
+        <td>$59,100</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">PL-JP-2026-001 · President Luggage</div>
+  <div class="page-num">02</div>
+</section>
+
+<!-- ============ PAGE 3: PHASE 2 + MIGRATION ============ -->
+<section class="sheet padding-15mm">
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 50%">Description</th>
+        <th style="width: 30%">Scope / Deliverables</th>
+        <th style="width: 20%">Amount (HKD)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="phase-header">
+        <td colspan="3">Phase 2 — Full Launch (Ki Line)</td>
+      </tr>
+      <tr>
+        <td>
+          G. Ki Line Product Build
+          <span class="item-desc">Premium product page design &amp; development, enhanced storytelling, Japan-range catalogue expansion</span>
+        </td>
+        <td>Q1–Q2 2027</td>
+        <td>$9,500</td>
+      </tr>
+      <tr>
+        <td>
+          CRO &amp; Conversion Optimisation
+          <span class="item-desc">A/B testing framework, landing page &amp; product page experimentation, checkout optimisation</span>
+        </td>
+        <td>Q2 2027</td>
+        <td>$5,500</td>
+      </tr>
+      <tr>
+        <td>
+          Marketing Campaign Buildout
+          <span class="item-desc">Paid social campaigns, search campaigns, LINE campaigns, influencer activation based on Phase 1 data</span>
+        </td>
+        <td>Q2 2027</td>
+        <td>$8,800</td>
+      </tr>
+      <tr>
+        <td>
+          Retention &amp; CRM Activation
+          <span class="item-desc">Email automation flows, customer segmentation, loyalty programme evaluation, repeat purchase activation</span>
+        </td>
+        <td>Q2–Q3 2027</td>
+        <td>$4,800</td>
+      </tr>
+      <tr class="phase-subtotal">
+        <td colspan="2"><strong>Phase 2 Subtotal</strong></td>
+        <td>$28,600</td>
+      </tr>
+
+      <tr class="phase-header">
+        <td colspan="3">Asian Site Migration to Shopify Plus</td>
+      </tr>
+      <tr>
+        <td>
+          Platform Audit &amp; Migration Strategy
+          <span class="item-desc">Audit each existing Asian site, migration planning, data structure mapping, URL redirect strategy (301s)</span>
+        </td>
+        <td>Parallel</td>
+        <td>$3,500</td>
+      </tr>
+      <tr>
+        <td>
+          Data Migration
+          <span class="item-desc">Products, customers, order history, content migration — up to 3 existing Asian markets</span>
+        </td>
+        <td>Parallel</td>
+        <td>$12,000</td>
+      </tr>
+      <tr>
+        <td>
+          Design Adaptation
+          <span class="item-desc">Align existing market storefronts with new brand system, local market preference adjustments</span>
+        </td>
+        <td>Parallel</td>
+        <td>$8,500</td>
+      </tr>
+      <tr>
+        <td>
+          Integration &amp; Go-Live Coordination
+          <span class="item-desc">Market-specific payment gateways, fulfilment configuration, QA testing, staged migration</span>
+        </td>
+        <td>Parallel</td>
+        <td>$7,500</td>
+      </tr>
+      <tr class="phase-subtotal">
+        <td colspan="2"><strong>Migration Subtotal</strong></td>
+        <td>$31,500</td>
+      </tr>
+
+      <tr class="total-row">
+        <td colspan="2"><strong>TOTAL ENGAGEMENT</strong></td>
+        <td><strong>HKD $119,200</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">PL-JP-2026-001 · President Luggage</div>
+  <div class="page-num">03</div>
+</section>
+
+<!-- ============ PAGE 4: SUMMARY + PAYMENT + NOTES ============ -->
+<section class="sheet padding-15mm">
+  <div class="summary">
+    <div class="summary-left">
+      <h3>Scope Notes</h3>
+      <ul>
+        <li>Shopify Plus subscription (USD $2,300/month) billed directly to client</li>
+        <li>Paid Shopify apps billed directly to client</li>
+        <li>Product photography &amp; video provided by client</li>
+        <li>Influencer fees (gifting, paid partnerships) are client budget</li>
+        <li>Quant research survey platform &amp; panel costs passed through at cost</li>
+        <li>Asian site migration covers up to 3 markets (additional markets: HKD $4,000 each)</li>
+        <li>Travel to Japan (if required) quoted separately</li>
+      </ul>
+    </div>
+    <div class="summary-right">
+      <div class="line">
+        <span>Phase 1 — Market Test</span>
+        <span>$59,100</span>
+      </div>
+      <div class="line">
+        <span>Phase 2 — Full Launch</span>
+        <span>$28,600</span>
+      </div>
+      <div class="line">
+        <span>Asian Site Migration</span>
+        <span>$31,500</span>
+      </div>
+      <div class="line subtotal">
+        <span>Subtotal</span>
+        <span>$119,200</span>
+      </div>
+      <div class="line tax">
+        <span>Tax (0%)</span>
+        <span>$0</span>
+      </div>
+      <div class="line total">
+        <span>TOTAL DUE</span>
+        <span>HKD $119,200</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="payment-section">
+    <h3>Payment Terms</h3>
+    <div class="payment-grid">
+      <div class="payment-box">
+        <h4>Payment Schedule</h4>
+        <p>
+          <strong>30% deposit</strong> upon acceptance (HKD $35,760)<br>
+          <strong>40% milestone</strong> at Phase 1 store go-live (HKD $47,680)<br>
+          <strong>30% final</strong> at Phase 2 launch (HKD $35,760)<br><br>
+          <em>Migration payments can be aligned with Japan milestones or invoiced separately upon completion of each market migration.</em>
+        </p>
+      </div>
+      <div class="payment-box">
+        <h4>Bank Transfer Details</h4>
+        <p>
+          <strong>Bank:</strong> HSBC<br>
+          <strong>Bank Code:</strong> 004<br>
+          <strong>Account Name:</strong> Solamon Logan<br>
+          <strong>Account Number:</strong> 571-736586-292<br>
+          <strong>SWIFT/BIC:</strong> HSBCHKHHHKH<br>
+          <strong>Reference:</strong> PL-JP-2026-001
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="notes">
+    <h4>Important Notes</h4>
+    <p>
+      This invoice is valid for 30 days from the date of issue. Payment terms are net 30 days from invoice date unless otherwise agreed. Late payments are subject to a 1.5% monthly interest charge. All fees are quoted in Hong Kong Dollars (HKD). Any bank transfer fees are the responsibility of the client. Scope changes or additional work beyond what is detailed above will be quoted separately and require written approval before commencement.
+    </p>
+  </div>
+
+  <div class="footer">
+    <div class="thanks">Thank You for Your Business</div>
+    <p>
+      Logan Solaman · Shopify Expert · Hong Kong<br>
+      <a href="https://logansolaman.com">logansolaman.com</a><br><br>
+      Invoice #PL-JP-2026-001 · Issued August 19, 2026
+    </p>
+  </div>
+
+  <div class="page-footer">PL-JP-2026-001 · President Luggage</div>
+  <div class="page-num">04</div>
+</section>
+
+</body>
+</html>
