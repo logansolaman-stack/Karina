@@ -38,14 +38,6 @@ body {
   color: #6b6b6b;
 }
 
-/* Fix: Allow sections to grow beyond A4 page limit */
-.sheet {
-  height: auto !important;
-  min-height: 297mm;
-  overflow: visible !important;
-  page-break-after: always;
-}
-
 /* Cover Page */
 .cover {
   display: flex;
@@ -270,6 +262,8 @@ tr:nth-child(even) {
 </style>
 </head>
 <body class="A4">
+
+<!-- Cover Page -->
 <section class="sheet">
 <div class="cover">
   <h1>The Fun Guy Chocolate</h1>
@@ -278,13 +272,11 @@ tr:nth-child(even) {
   <div class="subtitle">Path to $1M Revenue</div>
   <div class="date">Prepared by Logan Solaman · August 2026</div>
 </div>
-
-<div class="page-num">01</div>
 </section>
 
+<!-- Page 2: Executive Summary -->
 <section class="sheet padding-15mm">
 <h2>Executive Summary</h2>
-
 <div class="lead">
 The Fun Guy Chocolate is positioned at the intersection of premium artisan chocolate and functional wellness — a $9.2B global market growing at 9.8% CAGR. With 5 SKUs, strong brand identity, and proven product-market fit at HKD $98, the brand is ready to scale from boutique to mainstream.
 </div>
@@ -324,10 +316,6 @@ The Fun Guy Chocolate is positioned at the intersection of premium artisan choco
   <p><strong>Key Initiatives:</strong> Major retail distribution, private label partnerships, new product formats (bites, bars, hot chocolate), strategic capital raise if needed</p>
 </div>
 
-<div class="page-num">02</div>
-</section>
-
-<section class="sheet padding-15mm">
 <h3>Investment Required</h3>
 <div class="metric-grid">
   <div class="metric">
@@ -345,13 +333,12 @@ The Fun Guy Chocolate is positioned at the intersection of premium artisan choco
 </div>
 
 <p><strong>Total 24-month investment: ~$750K</strong> to reach $1M revenue run rate, with positive unit economics from Month 4.</p>
-
-<div class="page-num">03</div>
+<div class="page-num">02</div>
 </section>
 
+<!-- Page 3: Market Opportunity -->
 <section class="sheet padding-15mm">
 <h2>Market Opportunity</h2>
-
 <h3>The Functional Chocolate Market</h3>
 
 <div class="callout">
@@ -395,10 +382,6 @@ The Fun Guy Chocolate is positioned at the intersection of premium artisan choco
   <li><strong>Channels:</strong> Instagram, TikTok, wellness blogs, boutique fitness studios</li>
 </ul>
 
-<div class="page-num">04</div>
-</section>
-
-<section class="sheet padding-15mm">
 <h4>Tertiary: The Corporate Wellness Buyer</h4>
 <ul>
   <li><strong>Demographics:</strong> HR/People Ops leaders, 35-55, managing 50-500 employee companies</li>
@@ -407,11 +390,10 @@ The Fun Guy Chocolate is positioned at the intersection of premium artisan choco
   <li><strong>Pain Points:</strong> Needs scalable wellness solutions that employees actually use, budget constraints</li>
   <li><strong>Channels:</strong> LinkedIn, HR conferences, corporate wellness platforms</li>
 </ul>
-
-<div class="page-num">05</div>
 </section>
 
 <section class="sheet padding-15mm">
+<h2>Market Opportunity</h2>
 <h3>Competitive Landscape</h3>
 
 <table>
@@ -451,13 +433,12 @@ The Fun Guy Chocolate is positioned at the intersection of premium artisan choco
   <h4>Competitive Advantage</h4>
   <p>The Fun Guy Chocolate occupies a unique position: <strong>premium artisan quality + functional efficacy + approachable brand</strong>. Competitors either sacrifice quality (mass market), efficacy (low-dose), or accessibility (psychedelic positioning). Our "quirky, weird, but premium" brand voice makes functional mushrooms approachable without dumbing down the science.</p>
 </div>
-
-<div class="page-num">06</div>
+<div class="page-num">03</div>
 </section>
 
+<!-- Page 4: Phase 1 Strategy -->
 <section class="sheet padding-15mm">
 <h2>Phase 1: Foundation (Months 1-6)</h2>
-
 <div class="lead">
 Build the DTC growth engine: optimize conversion, launch subscription model, establish customer acquisition channels, and create the brand authority needed to unlock retail partnerships.
 </div>
@@ -471,7 +452,8 @@ Build the DTC growth engine: optimize conversion, launch subscription model, est
 <p><strong>Target:</strong> 3-4% conversion rate through strategic optimization</p>
 
 <div class="callout">
-  <h4>CRO Tactics</h4>
+
+<h4>CRO Tactics</h4>
   <ul>
     <li><strong>Product Page Optimization:</strong> Add video content (ingredient sourcing, taste tests), customer reviews with photos, FAQ section addressing common objections (taste, efficacy, dosage)</li>
     <li><strong>Trust Signals:</strong> Display certifications (organic, third-party tested), customer testimonials, media mentions</li>
@@ -485,7 +467,8 @@ Build the DTC growth engine: optimize conversion, launch subscription model, est
 <p><strong>Rationale:</strong> Subscription customers have 3-5x higher LTV and provide predictable revenue. Functional products like mushrooms require consistent use for efficacy — subscriptions align with product benefits.</p>
 
 <div class="callout">
-  <h4>Subscription Structure</h4>
+
+<h4>Subscription Structure</h4>
   <ul>
     <li><strong>Monthly Subscription:</strong> 15% discount, free shipping, flexible pause/skip</li>
     <li><strong>Quarterly Subscription:</strong> 20% discount, exclusive early access to new products</li>
@@ -494,10 +477,6 @@ Build the DTC growth engine: optimize conversion, launch subscription model, est
   </ul>
 </div>
 
-<div class="page-num">07</div>
-</section>
-
-<section class="sheet padding-15mm">
 <h4>3. Customer Acquisition Engine</h4>
 
 <h5>Paid Advertising</h5>
@@ -520,7 +499,10 @@ Build the DTC growth engine: optimize conversion, launch subscription model, est
   <li><strong>Podcast Sponsorships:</strong> Target 5-10 wellness/productivity podcasts (Huberman Lab, Ben Green Podcast, FoundMyFitness), $3K-8K per episode, focus on authentic host-read ads</li>
   <li><strong>YouTube:</strong> Partner with 3-5 health/wellness YouTubers for product reviews and integration into content</li>
 </ul>
+</section>
 
+<section class="sheet padding-15mm">
+<h2>Phase 1: Foundation (Months 1-6)</h2>
 <h4>4. Email & SMS Marketing</h4>
 <ul>
   <li><strong>Welcome Series:</strong> 5-email sequence introducing brand story, product benefits, customer testimonials, first-purchase incentive</li>
@@ -537,16 +519,10 @@ Build the DTC growth engine: optimize conversion, launch subscription model, est
   <li><strong>Gift Options:</strong> Premium gift packaging, personalized notes, corporate gifting program</li>
   <li><strong>Packaging Refinement:</strong> Ensure packaging communicates key benefits clearly (100% fruiting bodies, organic, science-backed), add QR code to educational content</li>
 </ul>
-
-<div class="page-num">08</div>
 </section>
 
 <section class="sheet padding-15mm">
-
-<div class="page-num">09</div>
-</section>
-
-<section class="sheet padding-15mm">
+<h2>Phase 1: Foundation (Months 1-6)</h2>
 <h3>Phase 1 Budget & ROI</h3>
 
 <table>
@@ -585,6 +561,19 @@ Build the DTC growth engine: optimize conversion, launch subscription model, est
     <td>$5,000</td>
     <td>15-20% AOV increase</td>
   </tr>
+</table>
+</section>
+
+<section class="sheet padding-15mm">
+<h2>Phase 1: Foundation (Months 1-6)</h2>
+<h3>Phase 1 Budget & ROI (continued)</h3>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Monthly Investment</th>
+    <th>Expected ROI</th>
+  </tr>
   <tr>
     <td>Team/Contractors</td>
     <td>$10,000</td>
@@ -597,36 +586,32 @@ Build the DTC growth engine: optimize conversion, launch subscription model, est
   </tr>
 </table>
 
-<div class="page-num">10</div>
+<p><strong>Phase 1 Total Investment:</strong> $180K over 6 months</p>
+<p><strong>Expected Revenue:</strong> $150K (achieving break-even and positive unit economics)</p>
+<p><strong>Key Outcome:</strong> Proven customer acquisition model, 30% subscription base, 3-4% conversion rate, ready for retail partnerships</p>
+<div class="page-num">04</div>
 </section>
 
-<section class="sheet padding-15mm">
-<p><strong>Phase 1 Total Investment:</strong> $180K over 6 months</p><p><strong>Expected Revenue:</strong> $150K (achieving break-even and positive unit economics)</p><p><strong>Key Outcome:</strong> Proven customer acquisition model, 30% subscription base, 3-4% conversion rate, ready for retail partnerships</p>
-
-<div class="page-num">11</div>
-</section>
-
-<section class="sheet padding-15mm">
-
-<div class="page-num">12</div>
-</section>
-
+<!-- Page 5: Phase 2 Strategy -->
 <section class="sheet padding-15mm">
 <h2>Phase 2: Expansion (Months 7-12)</h2>
-
 <div class="lead">
 Leverage DTC traction to unlock strategic retail partnerships, B2B channels, and geographic expansion. Build the wholesale infrastructure needed to scale beyond DTC limitations.
 </div>
 
 <h3>Objective: $400K Revenue (3,333 units/month)</h3>
+</section>
 
+<section class="sheet padding-15mm">
+<h2>Phase 2: Expansion (Months 7-12)</h2>
 <h3>Key Initiatives</h3>
 
 <h4>1. Premium Retail Partnerships</h4>
 <p><strong>Strategy:</strong> Target high-end health food stores, boutique grocers, and premium wellness retailers where The Fun Guy Chocolate's positioning aligns with store demographics.</p>
 
 <div class="callout">
-  <h4>Retail Targets (Priority Tier 1)</h4>
+
+<h4>Retail Targets (Priority Tier 1)</h4>
   <ul>
     <li><strong>Whole Foods Market (Regional):</strong> Start with 10-15 stores in key markets (NYC, LA, SF, Austin), leverage DTC data to demonstrate demand</li>
     <li><strong>Sprouts Farmers Market:</strong> Health-focused demographic, strong supplement section, regional expansion opportunity</li>
@@ -658,10 +643,6 @@ Leverage DTC traction to unlock strategic retail partnerships, B2B channels, and
 
 <div class="callout">
 
-<div class="page-num">13</div>
-</section>
-
-<section class="sheet padding-15mm">
 <h4>Corporate Wellness Program</h4>
   <ul>
     <li><strong>Offering:</strong> Monthly subscription boxes for offices (50-200 employees), customizable SKU selection</li>
@@ -679,7 +660,10 @@ Leverage DTC traction to unlock strategic retail partnerships, B2B channels, and
   <li><strong>Case Studies:</strong> Document 3-5 successful corporate partnerships, quantify productivity/focus improvements</li>
   <li><strong>Expansion:</strong> Upsell to larger employee counts, add new office locations, annual contracts</li>
 </ul>
+</section>
 
+<section class="sheet padding-15mm">
+<h2>Phase 2: Expansion (Months 7-12)</h2>
 <h4>3. Geographic Expansion</h4>
 <p><strong>Strategy:</strong> Expand beyond Hong Kong/Asia into US and UK markets where functional food adoption is highest and mushroom supplements are legal and mainstream.</p>
 
@@ -708,10 +692,6 @@ Leverage DTC traction to unlock strategic retail partnerships, B2B channels, and
   <li><strong>Target:</strong> 50-100 wholesale accounts by Month 12, 500 units/month</li>
 </ul>
 
-<div class="page-num">14</div>
-</section>
-
-<section class="sheet padding-15mm">
 <h4>5. Operational Scale</h4>
 <ul>
   <li><strong>Manufacturing:</strong> Negotiate volume pricing with manufacturer, explore co-packing partnerships</li>
@@ -719,16 +699,10 @@ Leverage DTC traction to unlock strategic retail partnerships, B2B channels, and
   <li><strong>Inventory Management:</strong> Implement demand forecasting, safety stock optimization, reduce stockouts</li>
   <li><strong>Team Expansion:</strong> Hire wholesale sales manager, Amazon specialist, customer service rep</li>
 </ul>
-
-<div class="page-num">15</div>
 </section>
 
 <section class="sheet padding-15mm">
-
-<div class="page-num">16</div>
-</section>
-
-<section class="sheet padding-15mm">
+<h2>Phase 2: Expansion (Months 7-12)</h2>
 <h3>Phase 2 Budget & ROI</h3>
 
 <table>
@@ -762,6 +736,19 @@ Leverage DTC traction to unlock strategic retail partnerships, B2B channels, and
     <td>$10,000</td>
     <td>Long-term growth</td>
   </tr>
+</table>
+</section>
+
+<section class="sheet padding-15mm">
+<h2>Phase 2: Expansion (Months 7-12)</h2>
+<h3>Phase 2 Budget & ROI (continued)</h3>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Monthly Investment</th>
+    <th>Expected ROI</th>
+  </tr>
   <tr>
     <td>Operational Scale (3PL, inventory)</td>
     <td>$8,000</td>
@@ -779,23 +766,15 @@ Leverage DTC traction to unlock strategic retail partnerships, B2B channels, and
   </tr>
 </table>
 
-<div class="page-num">17</div>
+<p><strong>Phase 2 Total Investment:</strong> $220K over 6 months (after Phase 1 profits reinvested)</p>
+<p><strong>Expected Revenue:</strong> $400K (cumulative), $67K/month run rate by Month 12</p>
+<p><strong>Key Outcome:</strong> Diversified revenue (40% DTC, 35% retail, 15% B2B, 10% Amazon), proven wholesale model, international expansion underway</p>
+<div class="page-num">05</div>
 </section>
 
-<section class="sheet padding-15mm">
-<p><strong>Phase 2 Total Investment:</strong> $220K over 6 months (after Phase 1 profits reinvested)</p><p><strong>Expected Revenue:</strong> $400K (cumulative), $67K/month run rate by Month 12</p><p><strong>Key Outcome:</strong> Diversified revenue (40% DTC, 35% retail, 15% B2B, 10% Amazon), proven wholesale model, international expansion underway</p>
-
-<div class="page-num">18</div>
-</section>
-
-<section class="sheet padding-15mm">
-
-<div class="page-num">19</div>
-</section>
-
+<!-- Page 6: Phase 3 Strategy -->
 <section class="sheet padding-15mm">
 <h2>Phase 3: Scale (Months 13-24)</h2>
-
 <div class="lead">
 Achieve mass market penetration through major retail distribution, operational scale, and strategic product line extensions. Build the infrastructure and brand equity needed for $1M+ revenue run rate.
 </div>
@@ -808,7 +787,8 @@ Achieve mass market penetration through major retail distribution, operational s
 <p><strong>Strategy:</strong> Expand from premium/boutique retail to mass-market natural channel and specialty retail.</p>
 
 <div class="callout">
-  <h4>Priority Retail Targets (Tier 2)</h4>
+
+<h4>Priority Retail Targets (Tier 2)</h4>
   <ul>
     <li><strong>Whole Foods Market (National):</strong> 500+ stores, leverage regional success data, negotiate slotting fees and promotional support</li>
     <li><strong>Target:</strong> 200+ stores, premium positioning in "better-for-you" snack aisle</li>
@@ -833,7 +813,8 @@ Achieve mass market penetration through major retail distribution, operational s
 <h5>New Product Concepts</h5>
 
 <div class="phase-box">
-  <h4>Format Extensions</h4>
+
+<h4>Format Extensions</h4>
   <ul>
     <li><strong>Chocolate Bites (Snack Pack):</strong> 6-piece bag, $8-10 price point, impulse purchase, higher margin</li>
     <li><strong>Hot Chocolate Mix:</strong> Single-serve packets, $24 for 12-pack, seasonal (winter), gift-worthy</li>
@@ -843,11 +824,10 @@ Achieve mass market penetration through major retail distribution, operational s
 </div>
 
 <div class="phase-box">
-
-<div class="page-num">20</div>
 </section>
 
 <section class="sheet padding-15mm">
+<h2>Phase 3: Scale (Months 13-24)</h2>
 <h4>Functional Extensions</h4>
   <ul>
     <li><strong>Sleep Formula:</strong> Reishi + dark chocolate, evening use case, $14-16</li>
@@ -869,7 +849,8 @@ Achieve mass market penetration through major retail distribution, operational s
 <p><strong>Opportunity:</strong> License The Fun Guy Chocolate formulation and brand to larger CPG companies or create private label products for retailers.</p>
 
 <div class="callout">
-  <h4>Private Label Scenarios</h4>
+
+<h4>Private Label Scenarios</h4>
   <ul>
     <li><strong>Whole Foods 365 Brand:</strong> Create "365 Functional Chocolate" using our formulation, $3-4 per unit margin, 10K+ units/month potential</li>
     <li><strong>Trader Joe's:</strong> Exclusive SKU for TJ's, high volume, lower margin but brand halo</li>
@@ -894,11 +875,10 @@ Achieve mass market penetration through major retail distribution, operational s
   <li><strong>Specialty Food Association:</strong> Fancy Food Show participation, buyer meetings</li>
   <li><strong>International Distributors:</strong> Canada, Australia, Japan (mushroom culture), EU (pending novel food approval)</li>
 </ul>
-
-<div class="page-num">21</div>
 </section>
 
 <section class="sheet padding-15mm">
+<h2>Phase 3: Scale (Months 13-24)</h2>
 <h4>5. Operational Excellence</h4>
 
 <h5>Manufacturing Scale</h5>
@@ -926,23 +906,18 @@ Achieve mass market penetration through major retail distribution, operational s
 <p><strong>Decision Point (Month 18):</strong> Evaluate whether to bootstrap growth or raise strategic capital.</p>
 
 <div class="callout">
-  <h4>Funding Scenarios</h4>
+
+<h4>Funding Scenarios</h4>
   <ul>
     <li><strong>Scenario A - Bootstrap:</strong> Reinvest profits, grow organically, slower but maintain control. Target $1M revenue by Month 30-36.</li>
     <li><strong>Scenario B - Seed Round:</strong> Raise $1-2M from angel investors/seed funds, accelerate retail expansion and product development. Target $1M revenue by Month 18-24.</li>
     <li><strong>Scenario C - Strategic Investment:</strong> Partner with CPG company (Hain, Clif Bar, KIND) for distribution + capital. Faster scale, potential exit path.</li>
   </ul>
 </div>
-
-<div class="page-num">22</div>
 </section>
 
 <section class="sheet padding-15mm">
-
-<div class="page-num">23</div>
-</section>
-
-<section class="sheet padding-15mm">
+<h2>Phase 3: Scale (Months 13-24)</h2>
 <h3>Phase 3 Budget & ROI</h3>
 
 <table>
@@ -988,32 +963,15 @@ Achieve mass market penetration through major retail distribution, operational s
   </tr>
 </table>
 
-<div class="page-num">24</div>
+<p><strong>Phase 3 Total Investment:</strong> $350K over 12 months (funded by profits + potential capital raise)</p>
+<p><strong>Expected Revenue:</strong> $1M+ annual run rate by Month 24</p>
+<p><strong>Key Outcome:</strong> National retail distribution, diversified product line, operational scale, clear path to $5-10M revenue</p>
+<div class="page-num">06</div>
 </section>
 
-<section class="sheet padding-15mm">
-<p><strong>Phase 3 Total Investment:</strong> $350K over 12 months (funded by profits + potential capital raise)</p><p><strong>Expected Revenue:</strong> $1M+ annual run rate by Month 24</p><p><strong>Key Outcome:</strong> National retail distribution, diversified product line, operational scale, clear path to $5-10M revenue</p>
-
-<div class="page-num">25</div>
-</section>
-
-<section class="sheet padding-15mm">
-
-<div class="page-num">26</div>
-</section>
-
+<!-- Page 7: Financial Projections -->
 <section class="sheet padding-15mm">
 <h2>Financial Projections & Unit Economics</h2>
-
-<div class="page-num">27</div>
-</section>
-
-<section class="sheet padding-15mm">
-
-<div class="page-num">28</div>
-</section>
-
-<section class="sheet padding-15mm">
 <h3>Revenue Projection (24 Months)</h3>
 
 <table>
@@ -1047,6 +1005,20 @@ Achieve mass market penetration through major retail distribution, operational s
     <td>$635K</td>
     <td>700 → 900</td>
   </tr>
+</table>
+</section>
+
+<section class="sheet padding-15mm">
+<h2>Financial Projections & Unit Economics</h2>
+<h3>Revenue Projection (24 Months) (continued)</h3>
+
+<table>
+  <tr>
+    <th>Period</th>
+    <th>Monthly Revenue</th>
+    <th>Cumulative Revenue</th>
+    <th>Units/Month</th>
+  </tr>
   <tr>
     <td>Month 13-18 (Phase 3)</td>
     <td>$100K → $140K</td>
@@ -1066,21 +1038,10 @@ Achieve mass market penetration through major retail distribution, operational s
     <td><strong>2,000 units/month</strong></td>
   </tr>
 </table>
-
-<div class="page-num">29</div>
 </section>
 
 <section class="sheet padding-15mm">
-
-<div class="page-num">30</div>
-</section>
-
-<section class="sheet padding-15mm">
-
-<div class="page-num">31</div>
-</section>
-
-<section class="sheet padding-15mm">
+<h2>Financial Projections & Unit Economics</h2>
 <h3>Unit Economics (Current State)</h3>
 
 <div class="callout">
@@ -1116,16 +1077,10 @@ Achieve mass market penetration through major retail distribution, operational s
     <li><strong>LTV:CAC Ratio:</strong> 4.3x (excellent)</li>
   </ul>
 </div>
-
-<div class="page-num">32</div>
 </section>
 
 <section class="sheet padding-15mm">
-
-<div class="page-num">33</div>
-</section>
-
-<section class="sheet padding-15mm">
+<h2>Financial Projections & Unit Economics</h2>
 <h3>Channel Mix (Month 24)</h3>
 
 <table>
@@ -1172,21 +1127,10 @@ Achieve mass market penetration through major retail distribution, operational s
     <td><strong>58% blended</strong></td>
   </tr>
 </table>
-
-<div class="page-num">34</div>
 </section>
 
 <section class="sheet padding-15mm">
-
-<div class="page-num">35</div>
-</section>
-
-<section class="sheet padding-15mm">
-
-<div class="page-num">36</div>
-</section>
-
-<section class="sheet padding-15mm">
+<h2>Financial Projections & Unit Economics</h2>
 <h3>Profitability Timeline</h3>
 
 <ul>
@@ -1229,17 +1173,12 @@ Achieve mass market penetration through major retail distribution, operational s
     <span class="label">Annual Run Rate</span>
   </div>
 </div>
-
-<div class="page-num">37</div>
+<div class="page-num">07</div>
 </section>
 
+<!-- Page 8: Implementation Timeline -->
 <section class="sheet padding-15mm">
 <h2>Implementation Timeline</h2>
-
-<div class="page-num">38</div>
-</section>
-
-<section class="sheet padding-15mm">
 <h3>Phase 1: Foundation (Months 1-6)</h3>
 
 <div class="timeline">
@@ -1253,7 +1192,9 @@ Achieve mass market penetration through major retail distribution, operational s
       <li>Develop 6-month content calendar</li>
       <li>Begin influencer outreach (Tier 2 & 3)</li>
     </ul>
-  </div>  <div class="timeline-item">
+  </div>
+
+  <div class="timeline-item">
     <strong>Month 2: CRO & Subscription Launch</strong>
     <span>Weeks 5-8</span>
     <ul>
@@ -1263,7 +1204,9 @@ Achieve mass market penetration through major retail distribution, operational s
       <li>Begin paid advertising (Meta, Google)</li>
       <li>Launch blog/content marketing</li>
     </ul>
-  </div>  <div class="timeline-item">
+  </div>
+
+  <div class="timeline-item">
     <strong>Month 3: Scale Acquisition</strong>
     <span>Weeks 9-12</span>
     <ul>
@@ -1275,11 +1218,7 @@ Achieve mass market penetration through major retail distribution, operational s
     </ul>
   </div>
 
-<div class="page-num">39</div>
-</section>
-
-<section class="sheet padding-15mm">
-<div class="timeline-item">
+  <div class="timeline-item">
     <strong>Month 4-6: Optimize & Prepare for Phase 2</strong>
     <span>Weeks 13-24</span>
     <ul>
@@ -1290,12 +1229,12 @@ Achieve mass market penetration through major retail distribution, operational s
       <li>Hire wholesale sales manager</li>
       <li>Prepare US/UK market entry plan</li>
     </ul>
-  </div></div>
-
-<div class="page-num">40</div>
+  </div>
+</div>
 </section>
 
 <section class="sheet padding-15mm">
+<h2>Implementation Timeline</h2>
 <h3>Phase 2: Expansion (Months 7-12)</h3>
 
 <div class="timeline">
@@ -1335,11 +1274,10 @@ Achieve mass market penetration through major retail distribution, operational s
     </ul>
   </div>
 </div>
-
-<div class="page-num">41</div>
 </section>
 
 <section class="sheet padding-15mm">
+<h2>Implementation Timeline</h2>
 <h3>Phase 3: Scale (Months 13-24)</h3>
 
 <div class="timeline">
@@ -1353,7 +1291,9 @@ Achieve mass market penetration through major retail distribution, operational s
       <li>Hire VP Sales, Director of Marketing</li>
       <li>Evaluate funding options (bootstrap vs. raise)</li>
     </ul>
-  </div>  <div class="timeline-item">
+  </div>
+
+  <div class="timeline-item">
     <strong>Month 16-18: Major Retail Expansion</strong>
     <span>Weeks 61-72</span>
     <ul>
@@ -1363,7 +1303,9 @@ Achieve mass market penetration through major retail distribution, operational s
       <li>Develop Hot Chocolate Mix (Q4 launch)</li>
       <li>Implement ERP system, multi-node 3PL</li>
     </ul>
-  </div>  <div class="timeline-item">
+  </div>
+
+  <div class="timeline-item">
     <strong>Month 19-21: Operational Excellence</strong>
     <span>Weeks 73-84</span>
     <ul>
@@ -1375,11 +1317,7 @@ Achieve mass market penetration through major retail distribution, operational s
     </ul>
   </div>
 
-<div class="page-num">42</div>
-</section>
-
-<section class="sheet padding-15mm">
-<div class="timeline-item">
+  <div class="timeline-item">
     <strong>Month 22-24: Achieve $1M Run Rate</strong>
     <span>Weeks 85-96</span>
     <ul>
@@ -1389,20 +1327,21 @@ Achieve mass market penetration through major retail distribution, operational s
       <li>Diversified product line (8-10 SKUs)</li>
       <li>Clear path to $5-10M revenue in next 24 months</li>
     </ul>
-  </div></div>
-
-<div class="page-num">43</div>
+  </div>
+</div>
+<div class="page-num">08</div>
 </section>
 
+<!-- Page 9: Risk Mitigation -->
 <section class="sheet padding-15mm">
 <h2>Risk Mitigation & Contingency Planning</h2>
-
 <h3>Key Risks & Mitigation Strategies</h3>
 
 <h4>1. Market Risk: Consumer Adoption Slower Than Expected</h4>
 
 <div class="callout">
-  <h4>Risk Assessment</h4>
+
+<h4>Risk Assessment</h4>
   <p><strong>Probability:</strong> Medium | <strong>Impact:</strong> High</p>
   <p>Functional chocolate is an emerging category. Consumers may be skeptical of health claims or unwilling to pay premium pricing.</p>
 </div>
@@ -1418,7 +1357,8 @@ Achieve mass market penetration through major retail distribution, operational s
 <h4>2. Competitive Risk: Larger Players Enter Market</h4>
 
 <div class="callout">
-  <h4>Risk Assessment</h4>
+
+<h4>Risk Assessment</h4>
   <p><strong>Probability:</strong> High | <strong>Impact:</strong> Medium</p>
   <p>Large CPG companies (Nestlé, Mars, Hershey) or supplement companies (Four Sigmatic, Host Defense) may launch competing functional chocolate products.</p>
 </div>
@@ -1434,15 +1374,12 @@ Achieve mass market penetration through major retail distribution, operational s
 <h4>3. Regulatory Risk: FDA/Novel Food Compliance</h4>
 
 <div class="callout">
-  <h4>Risk Assessment</h4>
+
+<h4>Risk Assessment</h4>
   <p><strong>Probability:</strong> Low (US) / Medium (EU) | <strong>Impact:</strong> High</p>
   <p>Mushroom supplements are legal in the US (dietary supplement category) but may face novel food approval requirements in EU/UK.</p>
 </div>
 
-<div class="page-num">44</div>
-</section>
-
-<section class="sheet padding-15mm">
 <h5>Mitigation Strategies</h5>
 <ul>
   <li><strong>US Market:</strong> Ensure FDA-compliant labeling (dietary supplement facts panel, structure/function claims only, no disease claims). Work with regulatory consultant.</li>
@@ -1454,11 +1391,10 @@ Achieve mass market penetration through major retail distribution, operational s
 <h4>4. Supply Chain Risk: Ingredient Shortages or Quality Issues</h4>
 
 <div class="callout">
-
-<div class="page-num">45</div>
 </section>
 
 <section class="sheet padding-15mm">
+<h2>Risk Mitigation & Contingency Planning</h2>
 <h4>Risk Assessment</h4>
   <p><strong>Probability:</strong> Medium | <strong>Impact:</strong> High</p>
   <p>Mushroom extracts are agricultural products subject to weather, disease, and supply constraints. Quality consistency is critical for brand reputation.</p>
@@ -1475,7 +1411,8 @@ Achieve mass market penetration through major retail distribution, operational s
 <h4>5. Cash Flow Risk: Growth Requires Capital</h4>
 
 <div class="callout">
-  <h4>Risk Assessment</h4>
+
+<h4>Risk Assessment</h4>
   <p><strong>Probability:</strong> Medium | <strong>Impact:</strong> High</p>
   <p>Inventory, manufacturing, and marketing require upfront capital. Growth may outpace cash generation, especially in Phase 2-3.</p>
 </div>
@@ -1492,7 +1429,8 @@ Achieve mass market penetration through major retail distribution, operational s
 <h4>6. Operational Risk: Scaling Complexity</h4>
 
 <div class="callout">
-  <h4>Risk Assessment</h4>
+
+<h4>Risk Assessment</h4>
   <p><strong>Probability:</strong> High | <strong>Impact:</strong> Medium</p>
   <p>Moving from DTC to multi-channel (retail, wholesale, B2B, Amazon) adds operational complexity. Risk of stockouts, fulfillment errors, quality issues.</p>
 </div>
@@ -1505,13 +1443,12 @@ Achieve mass market penetration through major retail distribution, operational s
   <li><strong>Key Hires:</strong> Hire experienced operations manager before scaling. Don't try to "figure it out" as you go.</li>
   <li><strong>Quality Control:</strong> Implement QC checkpoints at every stage (receiving, production, fulfillment). Catch issues before they reach customers.</li>
 </ul>
-
-<h3>Contingency Scenarios</h3>
-
-<div class="page-num">46</div>
 </section>
 
 <section class="sheet padding-15mm">
+<h2>Risk Mitigation & Contingency Planning</h2>
+<h3>Contingency Scenarios</h3>
+
 <h4>Scenario A: Slower Growth (50% of Projections)</h4>
 <ul>
   <li><strong>Revenue:</strong> $500K by Month 24 (vs. $1M target)</li>
@@ -1556,13 +1493,12 @@ Achieve mass market penetration through major retail distribution, operational s
   <li><strong>Bootstrap:</strong> Moderate growth ($60-80K/month), profitable, can fund growth from cash flow</li>
   <li><strong>Decision Framework:</strong> Does capital accelerate growth enough to justify dilution?</li>
 </ul>
-
-<div class="page-num">47</div>
+<div class="page-num">09</div>
 </section>
 
+<!-- Page 10: Next Steps -->
 <section class="sheet padding-15mm">
 <h2>Next Steps & Immediate Actions</h2>
-
 <div class="lead">
 This strategy provides a roadmap to $1M revenue over 24 months. The next 30 days are critical for building momentum and establishing the foundation for Phase 1 success.
 </div>
@@ -1603,10 +1539,6 @@ This strategy provides a roadmap to $1M revenue over 24 months. The next 30 days
   <li><strong>Exit-Intent Popup:</strong> Install 10% discount popup for first-time visitors. Target: 5% email capture rate.</li>
 </ul>
 
-<div class="page-num">48</div>
-</section>
-
-<section class="sheet padding-15mm">
 <h4>Email Marketing Setup</h4>
 <ul>
   <li><strong>Welcome Series:</strong> Write 5-email welcome sequence (brand story, product benefits, customer testimonials, first-purchase offer).</li>
@@ -1615,10 +1547,6 @@ This strategy provides a roadmap to $1M revenue over 24 months. The next 30 days
   <li><strong>Newsletter Template:</strong> Design weekly newsletter template (educational content, product spotlight, customer story).</li>
 </ul>
 
-<div class="page-num">49</div>
-</section>
-
-<section class="sheet padding-15mm">
 <h4>Influencer Outreach</h4>
 <ul>
   <li><strong>Research:</strong> Identify 50 micro-influencers (10K-100K followers) in wellness, productivity, biohacking niches.</li>
@@ -1626,7 +1554,10 @@ This strategy provides a roadmap to $1M revenue over 24 months. The next 30 days
   <li><strong>Tracking:</strong> Set up affiliate tracking (Shopify Collabs, Refersion, or manual UTM codes).</li>
   <li><strong>Content Brief:</strong> Create influencer content brief (key messages, dos/don'ts, FTC disclosure requirements).</li>
 </ul>
+</section>
 
+<section class="sheet padding-15mm">
+<h2>Next Steps & Immediate Actions</h2>
 <h3>Week 3-4: Launch Phase 1</h3>
 
 <h4>Paid Advertising</h4>
@@ -1663,10 +1594,6 @@ This strategy provides a roadmap to $1M revenue over 24 months. The next 30 days
   <li><strong>Instagram Followers:</strong> 5,000+ (if starting from scratch)</li>
 </ul>
 
-<div class="page-num">50</div>
-</section>
-
-<section class="sheet padding-15mm">
 <h4>Key Activities</h4>
 <ul>
   <li><strong>Data Analysis:</strong> Weekly review of key metrics (conversion rate, CAC, LTV, retention). Identify what's working, what's not.</li>
@@ -1675,11 +1602,10 @@ This strategy provides a roadmap to $1M revenue over 24 months. The next 30 days
   <li><strong>Content Scaling:</strong> Publish 8 blog posts, increase social media frequency, launch YouTube channel (if applicable).</li>
   <li><strong>Product Testing:</strong> Test multi-pack bundles (3-pack, 5-pack). Measure impact on AOV.</li>
 </ul>
-
-<div class="page-num">51</div>
 </section>
 
 <section class="sheet padding-15mm">
+<h2>Next Steps & Immediate Actions</h2>
 <h3>Month 3: Accelerate</h3>
 
 <h4>Goals</h4>
@@ -1699,10 +1625,6 @@ This strategy provides a roadmap to $1M revenue over 24 months. The next 30 days
   <li><strong>Retail Preparation:</strong> Begin outreach to Tier 1 retail targets. Prepare wholesale pitch deck, pricing, terms.</li>
 </ul>
 
-<div class="page-num">52</div>
-</section>
-
-<section class="sheet padding-15mm">
 <h3>Key Success Metrics (First 90 Days)</h3>
 
 <div class="metric-grid">
@@ -1734,11 +1656,10 @@ This strategy provides a roadmap to $1M revenue over 24 months. The next 30 days
     <span class="label">Email Subscribers</span>
   </div>
 </div>
-
-<div class="page-num">53</div>
 </section>
 
 <section class="sheet padding-15mm">
+<h2>Next Steps & Immediate Actions</h2>
 <h3>Resources Needed</h3>
 
 <h4>Team (Contract/Part-Time)</h4>
@@ -1781,10 +1702,6 @@ This strategy provides a roadmap to $1M revenue over 24 months. The next 30 days
   <p><strong>12-Month ROI:</strong> $400-500K revenue on $134K investment = 3-4x ROI</p>
 </div>
 
-<div class="page-num">54</div>
-</section>
-
-<section class="sheet padding-15mm">
 <h3>Your Next 5 Actions (This Week)</h3>
 
 <ol>
@@ -1794,8 +1711,8 @@ This strategy provides a roadmap to $1M revenue over 24 months. The next 30 days
   <li><strong>Next Week:</strong> Begin team/agency selection (CRO specialist, email marketing, paid media).</li>
   <li><strong>By August 26:</strong> Finalize Phase 1 plan, secure team/resources, launch first initiatives.</li>
 </ol>
-
-<div class="page-num">55</div>
+<div class="page-num">10</div>
 </section>
+
 </body>
 </html>
